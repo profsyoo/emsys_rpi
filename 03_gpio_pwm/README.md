@@ -23,12 +23,12 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 ## 💻 C 예제
 
 ### 📄 파일
-- `8-2sw_polling.c`
+- `8-5pwm_led.c`
 
 ### ⚙️ 컴파일
 ```bash
-gcc -o 8-2sw_polling 8-2sw_polling.c -llgpio
-./8-2sw_polling
+gcc -o pwm_led 8-5pwm_led.c-llgpio
+./pw_led
 ```
 ---
 
