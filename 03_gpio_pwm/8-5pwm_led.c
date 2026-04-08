@@ -1,4 +1,5 @@
 /*
+*not tested yet.
 gcc wm_led.c -o 8-5pwm_led -llgpio
 sudo ./pwm_led
   */
