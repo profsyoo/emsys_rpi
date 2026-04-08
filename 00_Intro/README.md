@@ -1,11 +1,11 @@
-## Development Environments
-# Mobile hotspot
+# Development Environments
+## Mobile hotspot
 
 ---
-## H/W platform
+# H/W platform
 
 ---
-## Linux Commands
+# Linux Commands
 ```bash
 cd
 ls
