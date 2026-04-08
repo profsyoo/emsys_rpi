@@ -2,18 +2,21 @@
 # GPIO LED Example
 
 ## 목적
-GPIO 기본 동작 이해
+Raspberry Pi 5에서 GPIO의 기본 동작을 이해한다.
 
 ## 하드웨어
 - Raspberry Pi 5
-- LED + 330Ω 저항
+- LED
+- 330Ω 저항
+- Breadboard, Jumper wires
 
-## 컴파일(in C)
-```bash
-gcc -o blink blink_led.c -llgpio
-sudo ./gpio_led
+---
 
-## 파이썬 (in Python)
+## C 예제
+
+### 파일
+- `blink_led.c`
+
+### 컴파일
 ```bash
-gcc -o blink blink_led.c -llgpio
-sudo ./gpio_led
+gcc blink_led.c -o blink -llgpio
