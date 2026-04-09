@@ -25,7 +25,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 
 ### ⚙️ 컴파일
 ```bash
-gcc blink_led.c -o blink -llgpio
+pi@myhost: ~/src $ gcc blink_led.c -o blink -llgpio
 ```
 ---
 
@@ -33,11 +33,11 @@ gcc blink_led.c -o blink -llgpio
 ### 가상환경
 - 실행
 ```bash
-source myve/bin/activate
+pi@myhost: ~/src $ source myve/bin/activate
 ```
 - 모듈설치:
 ```bash
-pip install lgpio
+pi@myhost: ~/src $ pip install lgpio
 ```
 
 
@@ -46,5 +46,5 @@ pip install lgpio
 
 ### ⚙️ 실행
 ```bash
-python blin_led.py
+pi@myhost: ~/src $ python blin_led.py
 ```
