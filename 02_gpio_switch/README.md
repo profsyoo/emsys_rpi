@@ -28,10 +28,10 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 
 ### ⚙️ 컴파일
 ```bash
-gcc -o 8-2sw_polling 8-2sw_polling.c -llgpio
-./8-2sw_polling
-gcc -o 8-2sw_int 8-2sw_int.c -llgpio
-./8-2sw_int
+pi@myhost: ~/src $ gcc -o 8-2sw_polling 8-2sw_polling.c -llgpio
+pi@myhost: ~/src $ ./8-2sw_polling
+pi@myhost: ~/src $ gcc -o 8-2sw_int 8-2sw_int.c -llgpio
+pi@myhost: ~/src $ ./8-2sw_int
 ```
 ---
 
@@ -44,7 +44,7 @@ gcc -o 8-2sw_int 8-2sw_int.c -llgpio
 
 ### ⚙️ 실행
 ```bash
-python 8-2sw_polling.py
-python 8-2sw_int.py
-python 8-2.py
+pi@myhost: ~/src $ python 8-2sw_polling.py
+pi@myhost: ~/src $ python 8-2sw_int.py
+pi@myhost: ~/src $ python 8-2.py
 ```
