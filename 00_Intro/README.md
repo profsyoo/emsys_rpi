@@ -13,29 +13,29 @@ https://www.raspberrypi.com/products/raspberry-pi-5/
 ---
 # Linux Commands
 ```bash
-cd
-ls
-ls ~
-ls /
-cat hello.c
-shutdown -h now
+pi@myhost: ~/src $ cd
+pi@myhost: ~/src $ ls
+pi@myhost: ~/src $ ls ~
+pi@myhost: ~/src $ ls /
+pi@myhost: ~/src $ cat hello.c
+pi@myhost: ~/src $ sudo shutdown -h now
 ```
 ## C
 ```bash
-gcc -o hello helloc.
-gcc -o myled myled.c -llgpiols
-source myven/bin/activate
-python hello.py
+pi@myhost: ~/src $ gcc -o hello helloc.
+pi@myhost: ~/src $ gcc -o myled myled.c -llgpiols
+pi@myhost: ~/src $ source myven/bin/activate
+pi@myhost: ~/src $ python hello.py
 ```
 
 ## Python
 ### 가상환경(myven) 만들기
 ```bash
-python -m venv myven
+pi@myhost: ~/src $ python -m venv myven
 ```
 ### 가상환경(myven) 활성화/비활성화
 ```bash
-source myven/bin/activate
-deactivate
+pi@myhost: ~/src $ source myven/bin/activate
+pi@myhost: ~/src $ deactivate
 ```
 
