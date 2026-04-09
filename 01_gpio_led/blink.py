@@ -2,7 +2,7 @@ import time
 import lgpio
 
 # Configuration
-LED = 17
+LED = 6
 chip = lgpio.gpiochip_open(0)
 
 # Claim the GPIO pin for output
