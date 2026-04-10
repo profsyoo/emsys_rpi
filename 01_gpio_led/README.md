@@ -37,7 +37,7 @@ pi@myhost: ~/src $ source myve/bin/activate
 ```
 - 모듈설치:
 ```bash
-pi@myhost: ~/src $ pip install lgpio
+(myvenv) pi@myhost: ~/src $ pip install lgpio
 ```
 
 
@@ -46,5 +46,5 @@ pi@myhost: ~/src $ pip install lgpio
 
 ### ⚙️ 실행
 ```bash
-pi@myhost: ~/src $ python blin_led.py
+(myvenv) pi@myhost: ~/src $ python blin_led.py
 ```
