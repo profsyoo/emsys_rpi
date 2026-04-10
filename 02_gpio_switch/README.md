@@ -44,7 +44,8 @@ pi@myhost: ~/src $ ./8-2sw_int
 
 ### ⚙️ 실행
 ```bash
-pi@myhost: ~/src $ python 8-2sw_polling.py
-pi@myhost: ~/src $ python 8-2sw_int.py
-pi@myhost: ~/src $ python 8-2.py
+pi@myhost: ~/src/py $ source myvenv/bin/activate
+pi@myhost: ~/src/py $ python 8-2sw_polling.py
+pi@myhost: ~/src/py $ python 8-2sw_int.py
+pi@myhost: ~/src/py $ python 8-2.py
 ```
