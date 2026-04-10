@@ -41,6 +41,7 @@ pi@myhost: ~/src $ ./8-2sw_int
 - `8-2sw_polling.py`
 - `8-2sw_int.py`
 - `8-2.py`
+- `8-3event.py`
 
 ### ⚙️ 실행
 ```bash
