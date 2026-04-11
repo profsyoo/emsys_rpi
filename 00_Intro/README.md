@@ -23,11 +23,13 @@ C:\Users\OWNER>ping 192.168.137.51
     ```bash
     pi@myhost: ~/ $ sudo apt install -y xrdp
     ```
+    - Development Host에서 mstsc(원격데스크톱 응용 프로그램)을 실행시켜 컴퓨터 이름에 RPi5 ip를 입력하고 연결('connect')를 누르면, 접속되자마자 종료(이미 local에 사용자가 로긴되어 있는 경우, xrdp는 접속되자 마자 바로 종료)
     - 자동 로그인(Console, Desktop) 비활성화 & reboot
       ```bash
       pi@myhost: ~/ $ sudo raspi-config
       ```
     - 일반 사용자가 WiFi스캔 허용, polkit에 xrdp rule 추가
+      - 사용자, pi를 netdev그룹에 추가 & 규칙 파일 열기
       ```bash
       pi@myhost: ~/ $ sudo usermod -aG netdev pi
       pi@myhost: ~/ $ sudo nano /etc/polkit-1/rules.d/10-networkmanager-wifi.rules
@@ -42,10 +44,11 @@ C:\Users\OWNER>ping 192.168.137.51
         }
       });
       ```
-
-## 2. Raspberry Pi  켜기
-정상적인 경우 Green LED가 켜짐
-
+      - 규칙을 추가하였다면, 추가한 내용 확인 후 재부팅
+      ```bash
+      pi@myhost: ~/ $ sudo cat /etc/polkit-1/rules.d/10-networkmanager-wifi.rules
+      pi@myhost: ~/ $ sudo reboot
+      ```
 
 ---
 # H/W platform
