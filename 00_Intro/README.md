@@ -1,9 +1,51 @@
 # Development Environments
-## 1. Mobile hotspot
-모바일 핫스팟 활성화(SSID/passwd확인)
+## 1. Mobile hotspot at the Development Host(Windows 11) 
+- 모바일 핫스팟 활성화(SSID/passwd확인): use your mobile phoe to test the hotspot.
+
+## 2. Raspberry Pi  켜기
+- 정상적인 경우 Green LED가 켜짐
+- 모바일 핫스팟 설정 정보에서 연결된 디바이스의 ip확인(192.168.137.51?)
+- ping from Development host to the target embedded system(i.e., RPi5)
+```bash
+C:\Users\OWNER>ping 192.168.137.51
+```
+- Connect to the RPi5 via ssh(secure shell) protocol: assuming the user id at RPi5 is 'pi' and the ip of it is 192.168.137.51
+  ```bash
+  C:\Users\OWNER>ssh pi@192.168.137.51
+  ```
+  - 서버에 처음 접속하는 경우, 서버 identity를 확인하라는 메시지가 나오며, 'yes', 비밀번호를 물으면 RPi5 OS이미지 생성할 때 입력했던 비번('pi'user에 대한 비번)을 입력
+  - 리눅스 명령어 실습
+    ```bash
+    pi@myhost: ~/ $ uname -a
+    pi@myhost: ~/ $ ls
+    ```
+  - 원격데스크톱 설정 xrdp
+    ```bash
+    pi@myhost: ~/ $ sudo apt install -y xrdp
+    ```
+    - 자동 로그인(Console, Desktop) 비활성화 & reboot
+      ```bash
+      pi@myhost: ~/ $ sudo raspi-config
+      ```
+    - 일반 사용자가 WiFi스캔 허용, polkit에 xrdp rule 추가
+      ```bash
+      pi@myhost: ~/ $ sudo usermod -aG netdev pi
+      pi@myhost: ~/ $ sudo nano /etc/polkit-1/rules.d/10-networkmanager-wifi.rules
+      pi@myhost: ~/ $ sudo reboot
+      ```
+      - 위의 두 번재 명령어를 실행해서 nano 편집기에서 /etc/polkit-1/rules.d/10-networkmanager-wifi.rules에 추가활 내용.
+      ``` text
+      polkit.addRule(function(action, subject) {
+        // Wi-Fi 스캔 허용 규칙
+        if (action.id == "org.freedesktop.NetworkManager.wifi.scan" && subject.isInGroup("netdev") ) {
+          return polkit.Result.YES;
+        }
+      });
+      ```
 
 ## 2. Raspberry Pi  켜기
 정상적인 경우 Green LED가 켜짐
+
 
 ---
 # H/W platform
