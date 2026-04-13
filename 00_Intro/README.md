@@ -33,6 +33,7 @@ C:\Users\OWNER>ping 192.168.137.51
       ```bash
       pi@myhost: ~/ $ sudo usermod -aG netdev pi
       pi@myhost: ~/ $ sudo nano /etc/polkit-1/rules.d/10-networkmanager-wifi.rules
+      pi@myhost: ~/ $ sudo cat /etc/polkit-1/rules.d/10-networkmanager-wifi.rules
       pi@myhost: ~/ $ sudo reboot
       ```
       - 위의 두 번재 명령어를 실행해서 nano 편집기에서 /etc/polkit-1/rules.d/10-networkmanager-wifi.rules에 추가활 내용.
