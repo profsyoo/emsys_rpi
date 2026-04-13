@@ -91,11 +91,11 @@ pi@myhost: ~/src/py $ python hello.py
 
 ### 가상환경(myven) 만들기
 ```bash
-pi@myhost: ~/src $ python -m venv myven
+pi@myhost: ~/src/py $ python -m venv myven
 ```
 ### 가상환경(myven) 활성화/비활성화
 ```bash
-pi@myhost: ~/src $ source myven/bin/activate
+pi@myhost: ~/src/py $ source myven/bin/activate
 (myvenv) pi@myhost: ~/src $ deactivate
 ```
 
