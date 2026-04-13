@@ -62,19 +62,24 @@ pi@myhost: ~ $ mkdir sr
 pi@myhost: ~ $ cd src
 pi@myhost: ~/src $ ls
 pi@myhost: ~/src $ mkdir py
+pi@myhost: ~/src $ mkdir c
 pi@myhost: ~/src $ cd py
 pi@myhost: ~/src/py $ cd ..
 pi@myhost: ~/src $ ls ~
-pi@myhost: ~/src $ ls /
-pi@myhost: ~/src $ cat hello.c
-pi@myhost: ~/src $ sudo shutdown -h now
+pi@myhost: ~ $ ls /
+pi@myhost: / $ cd ~/src/c
+pi@myhost: ~/src/c $ sudo shutdown -h now
 ```
+
 ## C
 ```bash
-pi@myhost: ~/src $ gcc -o hello helloc.
-pi@myhost: ~/src $ gcc -o myled myled.c -llgpiols
-pi@myhost: ~/src $ source myven/bin/activate
-pi@myhost: ~/src $ python hello.py
+pi@myhost: ~ $ cd src/c
+pi@myhost: ~/src/c $ nao hello.c
+pi@myhost: ~/src/c $ cat hello.c
+pi@myhost: ~/src/c $ gcc -o hello hello.c
+pi@myhost: ~/src/c $ ./hello
+pi@myhost: ~/src/c $ gcc -o myled myled.c -llgpio
+pi@myhost: ~/src/c $ ./myled
 ```
 
 ## Python
