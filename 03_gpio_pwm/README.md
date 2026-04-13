@@ -12,7 +12,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 
 ## 🧰 하드웨어
 - Raspberry Pi 5
-- LED
+- LED(GPIO6)
 - 330Ω 저항
 - SWITCH
 - 10kOhm pull-down register
