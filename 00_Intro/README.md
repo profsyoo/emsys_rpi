@@ -58,8 +58,12 @@ https://www.raspberrypi.com/products/raspberry-pi-5/
 ---
 # Linux Commands
 ```bash
-pi@myhost: ~/src $ cd
+pi@myhost: ~ $ mkdir sr
+pi@myhost: ~ $ cd src
 pi@myhost: ~/src $ ls
+pi@myhost: ~/src $ mkdir py
+pi@myhost: ~/src $ cd py
+pi@myhost: ~/src/py $ cd ..
 pi@myhost: ~/src $ ls ~
 pi@myhost: ~/src $ ls /
 pi@myhost: ~/src $ cat hello.c
@@ -74,6 +78,12 @@ pi@myhost: ~/src $ python hello.py
 ```
 
 ## Python
+### 파이썬 스크립트 실행
+```bash
+pi@myhost: ~ $cd src/py
+pi@myhost: ~/src/py $ python hello.py
+```
+
 ### 가상환경(myven) 만들기
 ```bash
 pi@myhost: ~/src $ python -m venv myven
