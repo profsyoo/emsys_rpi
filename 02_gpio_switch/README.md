@@ -52,7 +52,12 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 ```
 
 ### ⚙️ DIY
-- time stamp 정보를 활용하여 이전 event와 지금 event의 시간 차(iterval)을 ms단위로 출력하도록 소스(8-2sw_int.py) 수정(8-2sw_int_diff.py)
+- time stamp 정보를 활용하여 이전 event와 지금 event의 시간 차(iterval)을 ms단위로 출력하도록 소스(`8-2sw_int.py`) 수정(`8-2sw_int_diff.py`)
 ```bash
 (myvenv) pi@myhost: ~/src/py $ python 8-2sw_int_diff.py
+```
+- C언어기반의 intterupt코드에서 똑같은 작업(`8-2sw_int.c` --> `8-2sw_int_diff.c`)
+```bash
+pi@myhost: ~/src $ gcc -o 8-2sw_int_diff 8-2sw_int_diff.c -llgpio
+pi@myhost: ~/src $ ./8-2sw_int_diff
 ```
