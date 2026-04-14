@@ -40,8 +40,8 @@ pi@myhost: ~/src $ ./8-2sw_int
 ### 📄 파일
 - `8-2sw_polling.py`
 - `8-2sw_int.py`
-- `8-2swNled.py`
 - `8-3event.py`
+- `8-4swNled.py`
 
 ### ⚙️ 실행
 ```bash
