@@ -12,7 +12,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 
 ## 🧰 하드웨어
 - Raspberry Pi 5
-- LED(GPIO6)
+- LED (GPIO06)
 - 330Ω 저항
 - Breadboard, Jumper wires
 
