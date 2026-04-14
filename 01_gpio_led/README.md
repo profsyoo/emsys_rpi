@@ -38,6 +38,8 @@ pi@myhost: ~/src $ source myve/bin/activate
 - 모듈설치:
 ```bash
 (myvenv) pi@myhost: ~/src $ pip install lgpio
+(myvenv) pi@myhost: ~/src $ pip install rpi-lgpio
+(myvenv) pi@myhost: ~/src $ sudo apt install swig liblgpio-dev python3-dev build-essential
 ```
 
 
