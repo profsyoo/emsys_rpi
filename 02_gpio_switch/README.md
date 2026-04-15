@@ -61,3 +61,8 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 pi@myhost: ~/src $ gcc -o 8-2sw_int_diff 8-2sw_int_diff.c -llgpio
 pi@myhost: ~/src $ ./8-2sw_int_diff
 ```
+- 스위치를 누를 때마다 LED toggle(on->off->on->off...)하도록 소스(`8-4swNled.py`) 수정(`8-2swNled_toggle.py`)
+```bash
+(myvenv) pi@myhost: ~/src/py $ python 8-2swNled_toggle.py
+```
+
