@@ -8,5 +8,5 @@
 
 int main(void){
   printf("hello~ C, in RPi5\n");
-  retrun 0;
+  return 0;
 }
