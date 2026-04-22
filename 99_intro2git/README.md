@@ -1,5 +1,3 @@
-===== COPY START =====
-
 # Git & GitHub 실습 (Raspberry Pi 5)
 
 본 자료는 **임베디드시스템** 교과목에서  
@@ -210,5 +208,3 @@ clone → pull → 수정 → add → commit → push
 
 임베디드시스템 수업  
 Raspberry Pi 5 Git 실습
-
-===== COPY END =====
