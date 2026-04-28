@@ -1,6 +1,6 @@
 # 🔌 GPIO Ultrasound Ranging Example
 
-Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
+Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not Ready!
 
 ---
 
