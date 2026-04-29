@@ -36,10 +36,12 @@ pi@myhost: ~/src $ ./pw_led
 ## 💻 Python 예제
 
 ### 📄 파일
+- `PhotoRegistor-pcf8591_lgpio.py'
 - `PhotoResistor-pcf8591.py`
 
 ### ⚙️ 실행
 ```bash
 pi@myhost: ~/src/py $ source myvenv/bin/activate 
-(myvenv) pi@myhost: ~/src/py $ python PhotoResistor-pcf8591.py
+(myvenv) pi@myhost: ~/src/py $ python PhotoRegistor-pcf8591_lgpio.py
+(myvenv) pi@myhost: ~/src/py $ python PhotoRegistor-pcf8591.py
 ```
