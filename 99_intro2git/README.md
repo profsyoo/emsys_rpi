@@ -128,6 +128,10 @@ git status
 ```bash
 git add myinfo.txt
 git commit -m "Add myinfo.txt for git practice"
+
+Username for 'https://github.com':
+Password for 'https://seyoo%40g.daegu.ac.kr@github.com':
+
 ```
 
 ---
