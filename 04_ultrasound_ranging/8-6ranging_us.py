@@ -30,5 +30,5 @@ GPIO.setup(echo, GPIO.IN)
 while True:
 	distance = measureDistance(trig, echo)
 	time.sleep(0.5) # 0.5초 간격으로 거리 측정(0.3으로 하면 정확)
-	print("물체와의 거리는 %fcm 입니다." % distance)
+	print("The distance to the object is %fcm." % distance)
 
