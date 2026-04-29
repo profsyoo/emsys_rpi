@@ -24,7 +24,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not
 ## 💻 C 예제
 
 ### 📄 파일
-- `8-6ranging.c`
+- ~~`8-6ranging.c`~~
 
 ### ⚙️ 컴파일
 ```bash
