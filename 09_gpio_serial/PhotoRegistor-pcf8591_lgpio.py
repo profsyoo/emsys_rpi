@@ -35,7 +35,9 @@ def write(val):                                # Write DAC output
 
 
 if __name__ == "__main__":
-
+#check your PCF8591 address by type in 'i2cdetect -y -1' in terminal.
+#check your PCF8591 address by type in 'i2cdetect -y 1' in terminal.
+    
     address = 0x48                              # PCF8591 I2C address
     setup(address)
 
