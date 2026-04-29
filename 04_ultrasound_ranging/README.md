@@ -36,10 +36,10 @@ pi@myhost: ~/src $ ./pw_led
 ## 💻 Python 예제
 
 ### 📄 파일
-- `8-5lgpio_pwm.py`
+- `8-6ranging_us.py`
 
 ### ⚙️ 실행
 ```bash
 pi@myhost: ~/src/py $ source myvenv/bin/activate 
-(myvenv) pi@myhost: ~/src/py $ python 8-5lgpio_pwm.py
+(myvenv) pi@myhost: ~/src/py $ python 8-6ranging_us.py
 ```
