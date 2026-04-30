@@ -13,6 +13,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not
 ## 🧰 하드웨어
 - Raspberry Pi 5
 - HC-SR04(Vcc-5V, Trigger(Out)-GPIO20, Echo(In)-GPIO16, Gnd-GND(0V))
+- passive-buzzer(+-GPIO13, --GND)
 - LED(GPIO06)
 - 330Ω 저항
 - ~~SWITCH~~
