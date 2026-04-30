@@ -41,6 +41,7 @@ pi@myhost: ~/src $ ./passive_buzzer
 - `8-6ranging_us.py`
 - `passive_buzzer.py`
 - `passive_buzzer_freq.py`
+- `passive_buzzer_pwm.py`
 
 ### ⚙️ 실행
 ```bash
