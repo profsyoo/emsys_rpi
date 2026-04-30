@@ -1,7 +1,7 @@
 import time
 import lgpio
 
-BUZZER = 22                         # BCM GPIO22 (wiringPi pin 15 equivalent)
+BUZZER = 13                         # BCM GPIO13
 
 print("Welcome to Elecrow")
 print("Raspberry Pi Passive Buzzer test program (lgpio)")
