@@ -10,7 +10,7 @@
 #include <unistd.h>        // usleep()
 #include <lgpio.h>
 
-#define BUZZER 22          // BCM GPIO22 (wiringPi pin 15)
+#define BUZZER 13          // BCM GPIO13
 
 int main(void)
 {
