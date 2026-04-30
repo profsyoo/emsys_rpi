@@ -19,13 +19,14 @@ def beep(freq, duration):                # Generate sound with given frequency
         time.sleep(period / 2)
 
 
-INIT_DIST = 100
+INIT_DIST = 60
 dist = INIT_DIST
 try:
     while True:
-        dist = dist - 5
+        dist = dist - 2
         time.sleep(0.3)
-      
+        print("Dist = ", dist)
+        
         if dist > 50:                     # Far distance
             time.sleep(0.3)               # Long silent interval
 
