@@ -26,11 +26,12 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not
 
 ### 📄 파일
 - ~~`8-6ranging.c`~~
-
+- `passive_buzzer.c`
+  
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o pwm_led 8-5pwm_led.c-llgpio
-pi@myhost: ~/src $ ./pw_led
+pi@myhost: ~/src $ gcc -o passive_buzzer passive_buzzer.c-llgpio
+pi@myhost: ~/src $ ./passive_buzzer
 ```
 ---
 
@@ -38,6 +39,8 @@ pi@myhost: ~/src $ ./pw_led
 
 ### 📄 파일
 - `8-6ranging_us.py`
+- `passive_buzzer.py`
+- `passive_buzzer_freq.py`
 
 ### ⚙️ 실행
 ```bash
