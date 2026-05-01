@@ -53,7 +53,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 ## 💻 DIY
 
 ### 📄 mini project
-- 차량 후방 감지기와 유사한 시스템을 만들어라(단, 거리에 따라서 LED의 밝기를 다르게 표현)
+- 차량 후방 감지기와 유사한 시스템을 만들어라(단, 거리에 따라서 LED의 밝기를 다르게 표현. 혹은 passive buzzer를 활용하여 소리 주파수/소리재생 지연시간 제어)
 - 요구사항 분석->설계->구현(python)
 
 ### 📄 파일
