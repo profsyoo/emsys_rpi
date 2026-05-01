@@ -40,8 +40,8 @@ pi@myhost: ~/src $ ./passive_buzzer
 ### 📄 파일
 - `8-6ranging_us.py`
 - `passive_buzzer.py`
-- `passive_buzzer_freq.py`
-- `passive_buzzer_pwm.py`
+- `passive_buzzer_freq.py`: with a function having freq. and duration.
+- `passive_buzzer_pwm.py`: pwm module
 
 ### ⚙️ 실행
 ```bash
