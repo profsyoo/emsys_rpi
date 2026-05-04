@@ -24,9 +24,16 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 - `blink_led.c`
 
 ### ⚙️ 컴파일
+- Compile
 ```bash
-pi@myhost: ~/src $ gcc blink_led.c -o blink -llgpio
+pi@myhost: ~/src/c $ gcc blink_led.c -o blink -llgpio
 ```
+- Error?
+  - fatal error: lgpio.h: No such file or directory?
+  - install 'liblgpio-dev' library first then compile 'blink.c' again
+  ```bash
+  pi@myhost: ~/src/c $ sudo apt install liblgpio-dev
+  ```
 ---
 
 ## 💻 Python 예제
