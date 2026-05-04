@@ -1,5 +1,8 @@
 /*blink.c
 $gcc –o blink_led blink.c -llgpio
+!! fatal error: lgpio.h: No such file or directory!!
+install 'lblgpio-dev' library first, then compile blink.c again.
+how to install the lib.: $sudo apt install liblgpio-dev
 */
 #include <stdio.h>
 #include <unistd.h>
