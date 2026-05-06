@@ -13,7 +13,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 ## 🧰 하드웨어
 - Raspberry Pi 5
 - PCF8591 AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
-  <img width="137" height="107" alt="image" src="https://github.com/user-attachments/assets/5bf7f2cf-abdc-4b1f-bf6a-10ba2dba0fd7" />
+  <img width="437" height="220" alt="image" src="https://github.com/user-attachments/assets/6e4e698a-dbdc-4d8e-b7dc-8a945ce84ab2" />
 - HC-SR04(Vcc-5V, Trigger(Out)-GPIO20, Echo(In)-GPIO16, Gnd-GND(0V))
 - passive-buzzer(+-GPIO13, --GND)
 - LED(GPIO06)
