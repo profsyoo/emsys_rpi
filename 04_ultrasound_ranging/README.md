@@ -32,7 +32,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not
   
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o passive_buzzer passive_buzzer.c-llgpio
+pi@myhost: ~/src $ gcc -o passive_buzzer passive_buzzer.c -llgpio
 pi@myhost: ~/src $ ./passive_buzzer
 ```
 ---
