@@ -16,8 +16,8 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다. Not
 - passive-buzzer(+-GPIO13, --GND)
 - LED(GPIO06)
 - 330Ω 저항
-- ~~SWITCH~~
-- ~~10kOhm pull-down register~~
+- SWITCH
+- 10kOhm pull-down register
 - Breadboard, Jumper wires
 
 ---
