@@ -15,8 +15,8 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 - PCF8591 AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
 - LED(GPIO06)
 - 330Ω 저항
-- ~~SWITCH~~
-- ~~10kOhm pull-down register~~
+- SWITCH
+- 10kOhm pull-down register
 - Breadboard, Jumper wires
 
 ---
