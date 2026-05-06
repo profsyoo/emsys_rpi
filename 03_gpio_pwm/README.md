@@ -27,7 +27,7 @@ Raspberry Pi 5에서 **GPIO 기본 동작**을 실습하는 예제입니다.
 
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o pwm_led 8-5pwm_led.c-llgpio
+pi@myhost: ~/src $ gcc -o pwm_led 8-5pwm_led.c -llgpio
 pi@myhost: ~/src $ ./pw_led
 ```
 ---
