@@ -4,6 +4,7 @@
 #include <lgpio.h>
 
 #define I2C_BUS        1        // /dev/i2c-1
+//check your PCF8591 address by type in 'i2cdetect -y 1' in terminal.
 #define PCF8591_ADDR  0x48
 
 int i2c_handle;
