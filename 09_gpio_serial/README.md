@@ -36,8 +36,8 @@ pi@myhost: ~/src $ ./pw_led
 ## 💻 Python 예제
 
 ### 📄 파일
-- `PhotoRegistor-pcf8591_lgpio.py'
-- `PhotoResistor-pcf8591.py`
+- `PhotoRegistor-pcf8591_lgpio.py`(i2c)
+- `PhotoResistor-pcf8591.py`(SMBus)
 
 ### ⚙️ 실행
 ```bash
