@@ -1,4 +1,4 @@
-# 🔌 USB WEBCAM Example
+# 🔌 ~~USB WEBCAM Example~~(Unavailable)
 
 Raspberry Pi 5에서 **USB Web Cam 기본 동작**을 실습하는 예제입니다.
 
