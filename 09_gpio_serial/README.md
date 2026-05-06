@@ -12,7 +12,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 
 ## 🧰 하드웨어
 - Raspberry Pi 5
-- PCF8591 AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
+- <a href = "https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf">PCF8591</a> AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
   <img width="437" height="220" alt="image" src="https://github.com/user-attachments/assets/6e4e698a-dbdc-4d8e-b7dc-8a945ce84ab2" />
 - HC-SR04(Vcc-5V, Trigger(Out)-GPIO20, Echo(In)-GPIO16, Gnd-GND(0V))
 - passive-buzzer(+-GPIO13, --GND)
@@ -55,7 +55,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 - HW구성 후 버스 검사
   - 1번 i2c 버스에 대해, 라즈베리파이의 i2c master에 연결된 127개의 Slave를 찾아 정보 출력
   - 1번 i2c 버스에 연결된 모든 slave 장치를 찾아 출력
-  - 0x48번 번호를 가진 I2C slave 장치 발견 – pcf1891 모듈(AD/DC with Photoresistor, LED, etc.)
+  - 0x48번 번호를 가진 I2C slave 장치 발견 – <a href = "https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf">pcf1891</a> 모듈(AD/DC with Photoresistor, LED, etc.)
   ```bash
   pi@myhost: ~/src/c $ i2cdetect –y 1 
        0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
