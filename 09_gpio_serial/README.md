@@ -98,3 +98,20 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 
 ((myvenv) pi@myhost: ~/src/py $ pip install smbus)
 ```
+
+---
+## 💻 DIY
+
+### 📄 mini project
+- 조도에 따라서 외부 LEDD의 밝기를 제어하라(단, SW PWM활용)
+- 요구사항 분석->설계->구현(python)
+
+### 📄 파일
+- `photoresistor_led.py`
+
+### ⚙️ 실행
+```bash
+pi@myhost: ~/src/py $ source myvenv/bin/activate 
+(myvenv) pi@myhost: ~/src/py $ python photoresistor_led.py
+```
+
