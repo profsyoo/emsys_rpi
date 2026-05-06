@@ -74,11 +74,12 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 ## 💻 C 예제
 
 ### 📄 파일
-- `8-6ranging.c`
+- `PhotoResistor-pcf8591_lgpio.c`
+- `PhotoResistor-pcf8591.c`
 
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o pwm_led 8-5pwm_led.c-llgpio
+pi@myhost: ~/src $ gcc -o PhotoReisistor PhotoResistor-pcf8591_lgpio.c -llgpio
 pi@myhost: ~/src $ ./pw_led
 ```
 ---
