@@ -11,6 +11,11 @@ R_FIXED = 10000  # 10kΩ
 A = 500000
 GAMMA = 1.4
 
+# Thermistor
+B = 3950
+R0 = 10000
+T0 = 298.15
+
 
 def setup(addr):
     global address
