@@ -74,10 +74,13 @@ if __name__ == "__main__":
 
     try:
         while True:
-            print("AIN0 =", pot = read(0))            # Read channel 0, Potentiometer
-            print("AIN1 =", ldr = read(1))            # Read channel 1, Light Dependent Resistor(CdS)
-            print("AIN2 =", therm = read(2))         # Read channel 2, Thermistor
-            print("AIN3 =", read(3))            # Read channel 3
+            pot = read(0)    # Read channel 0, Potentiometer
+            ldr = read(1)    # Read channel 1, Light Dependent Resistor(CdS)
+            therm = read(2)  # Read channel 2, Thermistor
+            print("AIN0 =", pot)            
+            print("AIN1 =", ldr)            
+            print("AIN2 =", therm )         
+            print("AIN3 =", read(3))        # Read channel 3
             print(" ")
 
             v = adc_to_voltage(ldr)
