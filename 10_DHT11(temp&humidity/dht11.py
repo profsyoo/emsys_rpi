@@ -1,3 +1,4 @@
+#gen. by Gemini
 import time
 import board
 import adafruit_dht
