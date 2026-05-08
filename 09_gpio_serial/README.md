@@ -22,11 +22,11 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
                   |
      AIN0 --------+--------[VR1]---GND
          
-     AIN1 ---------<-------[10kOhm]----Vcc
+     AIN1 ---------<-------[R3:10kOhm]----Vcc
                    |
             GND---[LDR]
                    
-     AIN2 ---------<-------[10kOhm]----Vcc
+     AIN2 ---------<-------[R4:10kOhm]----Vcc
                    |
             GND---[thermistor]
                   
