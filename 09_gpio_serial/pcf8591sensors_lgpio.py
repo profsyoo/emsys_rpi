@@ -74,21 +74,27 @@ if __name__ == "__main__":
 
     try:
         while True:
-            print("AIN0 =", read(0))            # Read channel 0
-            print("AIN1 =", read(1))            # Read channel 1
-            print("AIN2 =", read(2))            # Read channel 2
+            print("AIN0 =", pot = read(0))            # Read channel 0, Potentiometer
+            print("AIN1 =", ldr = read(1))            # Read channel 1, Light Dependent Resistor(CdS)
+            print("AIN2 =", therm = read(2))         # Read channel 2, Thermistor
             print("AIN3 =", read(3))            # Read channel 3
             print(" ")
 
-            tmp = read(1)                       # Read light sensor value
-            v = adc_to_voltage(tmp)
+            v = adc_to_voltage(ldr)
             r = voltage_to_resistance(v)
             lux = resistance_to_lux(r)
             print("Current light intensity: {}lux {}mV\n".format(lux, v))
 
-            tmp = tmp * (255 - 125) / 255 + 125 # Scale value (LED threshold)
+            tmp = ldr * (255 - 125) / 255 + 125 # Scale value (LED threshold)
             write(tmp)                          # Output to DAC
 
+            v = adc_to_voltage(therm)
+            r = voltage_to_resistance(v)            
+
+            tempK = 1 / (1/T0 + (1/B) * math.log(r/R0))
+            tempC = tempK - 273.15
+            print("Current temperature: {}C {}mV\n".format(tempC, v))
+            
             time.sleep(1.0)                     # 1 second delay
 
     except KeyboardInterrupt:
