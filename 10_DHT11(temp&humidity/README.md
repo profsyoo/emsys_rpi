@@ -60,13 +60,12 @@ Raspberry Pi 5에서 **DHT11 기본 동작**을 실습하는 예제입니다. No
 ## 💻 C 예제
 
 ### 📄 파일
-- `PhotoResistor-pcf8591_lgpio.c`
-- `PhotoResistor-pcf8591.c`
+- `dht11.c`
 
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o PhotoReisistor PhotoResistor-pcf8591_lgpio.c -llgpio
-pi@myhost: ~/src $ ./pw_led
+pi@myhost: ~/src $ gcc -o dht11 dht11.c -llgpio
+pi@myhost: ~/src $ ./dht11
 ```
 ---
 
@@ -74,11 +73,13 @@ pi@myhost: ~/src $ ./pw_led
 
 ### 📄 파일
 - `dht11.py`
+- `dht11_lgpio.py'
 
 ### ⚙️ 실행
 ```bash
 pi@myhost: ~/src/py $ source myvenv/bin/activate 
 (myvenv) pi@myhost: ~/src/py $ python dht11.py
+(myvenv) pi@myhost: ~/src/py $ python dht11_lgpio.py
 ```
 
 ---
