@@ -80,12 +80,10 @@ if __name__ == "__main__":
             print("AIN3 =", read(3))            # Read channel 3
             print(" ")
 
-           tmp = read(1)                       # Read light sensor value
-           v = adc_to_voltage(tmp)
-           r = voltage_to_resistance(v)
-           lux = resistance_to_lux(r)
-  
-        
+            tmp = read(1)                       # Read light sensor value
+            v = adc_to_voltage(tmp)
+            r = voltage_to_resistance(v)
+            lux = resistance_to_lux(r)
             print("Current light intensity: {}lux {}mV\n".format(lux, v))
 
             tmp = tmp * (255 - 125) / 255 + 125 # Scale value (LED threshold)
