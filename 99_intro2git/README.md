@@ -1,4 +1,4 @@
-# Git & GitHub 실습 (Raspberry Pi 5)
+# ~~Git & GitHub 실습 (Raspberry Pi 5)~~ (Not ready!)
 
 본 자료는 **임베디드시스템** 교과목에서  
 Raspberry Pi 5 환경에서 Git과 GitHub의 기본 사용법을 익히기 위한 실습 안내서입니다.
