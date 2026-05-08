@@ -6,7 +6,8 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 
 ## 🎯 목적
 - GPIO 출력/입력 설정 이해
-- Ultrasound Ranging 제어
+- Seirial Protocol 이해
+- ADC(pcf8591)/Photoresistor/Thermistor 이해
 
 ---
 
@@ -14,7 +15,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 - Raspberry Pi 5
 - <a href = "https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf">PCF8591</a> AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
   <img width="437" height="220" alt="image" src="https://github.com/user-attachments/assets/6e4e698a-dbdc-4d8e-b7dc-8a945ce84ab2" />
-  - potentiometer(AIN0), photoresistor(AIN1, 밝으면 저항 감소, 어두우면 저항 증가)/LDR(Light Dependent Resistor), thermistor(AIN2, 온도상승 저항감소)
+  - potentiometer(AIN0), photoresistor(AIN1, 밝으면 저항 감소, 어두우면 저항 증가)/LDR(Light Dependent Resistor), thermistor(AIN2, 온도하강->저항증가)
      ```text
                +3.3V (Vcc)
                   |
@@ -28,7 +29,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
                    
      AIN2 ---------<-------[R4:10kOhm]----Vcc
                    |
-            GND---[thermistor]
+            GND---[Thermistor]
                   
      AIN3 ---------<-GND
 - HC-SR04(Vcc-5V, Trigger(Out)-GPIO20, Echo(In)-GPIO16, Gnd-GND(0V))
