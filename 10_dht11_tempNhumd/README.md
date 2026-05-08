@@ -13,7 +13,7 @@ Raspberry Pi 5에서 **DHT11 기본 동작**을 실습하는 예제입니다. No
 
 ## 🧰 하드웨어
 - Raspberry Pi 5
-- **dht11**(VCC-5V, DATA-GPIO4, GND-GND)
+- **<a href = "https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf?srsltid=AfmBOoo9eabUqoBSPZdhw6zsjnxrcXep_eyau1uOid2S6jUx_5ejUms3">dht11</a>**(VCC-5V, DATA-GPIO4, GND-GND)
   <img width="316" height="125" alt="image" src="https://github.com/user-attachments/assets/f61a836f-540e-4485-bb09-db8dcfb3763c" />
 - <a href = "https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf">PCF8591</a> AD/DA(SDA-GPIO02, SCL-GPIO03, Vcc-3.3V, GND-GND)
   <img width="437" height="220" alt="image" src="https://github.com/user-attachments/assets/6e4e698a-dbdc-4d8e-b7dc-8a945ce84ab2" />
