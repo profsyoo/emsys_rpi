@@ -91,7 +91,7 @@ if __name__ == "__main__":
             v = adc_to_voltage(ldr)
             r = voltage_to_resistance(v)
             lux = resistance_to_lux(r)
-            print("Current light intensity: {}lux {}mV\n".format(lux, v))
+            print("Current light intensity: {:.2f}lux {:.4f}mV".format(lux, v))
 
             tmp = ldr * (255 - 125) / 255 + 125 # Scale value (LED threshold)
             write(tmp)                          # Output to DAC
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
             tempK = 1 / (1/T0 + (1/B) * math.log(r/R0))
             tempC = tempK - 273.15
-            print("Current temperature: {}C {}mV\n".format(tempC, v))
+            print("Current temperature: {:.2f}C {:.4f}mV\n".format(tempC, v))
             
             time.sleep(1.0)                     # 1 second delay
 
