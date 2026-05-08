@@ -1,3 +1,4 @@
+#translated by Gemini
 import time
 import lgpio
 
