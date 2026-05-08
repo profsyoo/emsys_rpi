@@ -50,6 +50,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
   - 현재 연결된  i2c 장치가 없기 때문에 아무것도 출력되지 않음
   - 아직 브레드보드에 아무 장치가 구성되지 않았기 때문
   ```bash
+  pi@myhost: ~/src/c $ sudo apt-get install i2cdetect
   pi@myhost: ~/src/c $ i2cdetect –y 1 
   ```
 - HW구성 후 버스 검사
