@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
             tempK = 1 / (1/T0 + (1/B) * math.log(r/R0))
             tempC = tempK - 273.15
-            print("Current temperature: {:.2f}C {:.4f}mV\n".format(tempC, v))
+            print("Current temperature: {:.2f}°C {:.4f}mV\n".format(tempC, v))
             
             time.sleep(1.0)                     # 1 second delay
 
