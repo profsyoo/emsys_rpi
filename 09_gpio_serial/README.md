@@ -106,14 +106,15 @@ pi@myhost: ~/src $ ./pw_led
 
 ### 📄 파일
 - `PhotoRegistor-pcf8591_lgpio.py`(i2c)
+- `pcf8591sensors_lgpio.py`(sensors: °C and lux)
 - `PhotoResistor-pcf8591.py`(SMBus)
 
 ### ⚙️ 실행
 ```bash
 pi@myhost: ~/src/py $ source myvenv/bin/activate 
 (myvenv) pi@myhost: ~/src/py $ python PhotoRegistor-pcf8591_lgpio.py
+(myvenv) pi@myhost: ~/src/py $ python pcf8591sensors_lgpio.py
 (myvenv) pi@myhost: ~/src/py $ python PhotoRegistor-pcf8591.py
-
 ((myvenv) pi@myhost: ~/src/py $ pip install smbus)
 ```
 
