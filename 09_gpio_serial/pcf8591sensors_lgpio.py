@@ -1,7 +1,7 @@
 #lgpio version
 import time
 import lgpio
-
+import math
 
 # ===== 사용자 보정값 =====
 VCC = 3.3
