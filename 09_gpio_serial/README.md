@@ -99,7 +99,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 ### ⚙️ 컴파일
 ```bash
 pi@myhost: ~/src $ gcc -o PhotoReisistor PhotoResistor-pcf8591_lgpio.c -llgpio
-pi@myhost: ~/src $ ./pw_led
+pi@myhost: ~/src $ ./PhotoReisistor
 ```
 ---
 
