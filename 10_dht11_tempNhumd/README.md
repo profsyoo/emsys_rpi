@@ -1,6 +1,7 @@
 # 🔌 GPIO Serial Comm. Example
 
-Raspberry Pi 5에서 **DHT11 기본 동작**을 실습하는 예제입니다. Not Ready!
+Raspberry Pi 5에서 **DHT11 기본 동작**을 실습하는 예제입니다. 
+<a href="https://gemini.google.com/">**Google Geminni**</a>를 활용하여 제조사가 제공한 이전 코드를 Raspberry Pi5에 맞게 수정하였습니다.
 
 ---
 
