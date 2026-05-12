@@ -74,7 +74,7 @@ pi@myhost: ~/src $ ./dht11
 
 ### 📄 파일
 - `dht11.py`
-- `dht11_lgpio.py'
+- `dht11_lgpio.py`
 
 ### ⚙️ 실행
 ```bash
