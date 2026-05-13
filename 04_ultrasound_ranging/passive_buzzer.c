@@ -12,6 +12,7 @@
 
 #define BUZZER 13          // BCM GPIO13
 
+int chip_handle;
 
 /* Cleanup function for safe exit */
 void handle_sigint(int sig) {
@@ -31,7 +32,8 @@ int main(void)
     printf("Raspberry Pi Passive Buzzer test program (lgpio)\n");
     printf("Press Ctrl+C to exit\n");
 
-    h = lgGpiochipOpen(0);                     // Open gpiochip0
+    chip_handle = lgGpiochipOpen(0);                     // Open gpiochip0
+    h = chp_handle;
     lgGpioClaimOutput(h, 0, BUZZER, 0);           // Set BUZZER pin as output
 
     while (1)
