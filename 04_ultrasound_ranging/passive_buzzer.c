@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <unistd.h>        // usleep()
+#include <signal.h>
 #include <lgpio.h>
 
 #define BUZZER 13          // BCM GPIO13
@@ -33,7 +34,7 @@ int main(void)
     printf("Press Ctrl+C to exit\n");
 
     chip_handle = lgGpiochipOpen(0);                     // Open gpiochip0
-    h = chp_handle;
+    h = chip_handle;
     lgGpioClaimOutput(h, 0, BUZZER, 0);           // Set BUZZER pin as output
 
     while (1)
