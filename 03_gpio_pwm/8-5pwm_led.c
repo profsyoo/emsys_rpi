@@ -1,6 +1,6 @@
 /*
 *not tested yet.
-gcc wm_led.c -o 8-5pwm_led -llgpio
+gcc pwm_led.c -o 8-5pwm_led -llgpio
 sudo ./pwm_led
   */
 
@@ -17,30 +17,47 @@ int main(void)
     int duty;
 
     // GPIO chip 0 열기
-    chip = lgpio_gpiochip_open(0);
+    chip = lgGpiochipOpen(0);
     if (chip < 0) {
         printf("Failed to open gpio chip\n");
         return 1;
     }
 
     // GPIO 출력으로 설정
-    if (lgpio_gpio_claim_output(chip, 0, PIN, 0) < 0) {
+    if (lgGpioClaimOutput(chip, 0, PIN, 0) < 0) {
         printf("Failed to claim GPIO %d\n", PIN);
-        lgpio_gpiochip_close(chip);
+        lgGpiochipClose(chip);
         return 1;
     }
 
     // PWM duty cycle 증가
+    // check /usr/include/lgpio.h
+    /*int lgTxPwm(                 
+       int handle,               
+       int gpio,                 
+       float pwmFrequency,       
+       float pwmDutyCycle,
+       int pwmOffset,
+       int pwmCycles);           
+   
+        handle: >= 0 (as returned by [*lgGpiochipOpen*])
+        gpio: the GPIO to be pulsed
+        pwmFrequency: PWM frequency in Hz (0=off, 0.1-10000)
+        pwmDutyCycle: PWM duty cycle in % (0-100)
+        pwmOffset: offset from nominal pulse start position
+        pwmCycles: the number of pulses to be sent, 0 for infinite
+*/
+
     for (duty = 0; duty <= 100; duty += 10) {
-        lgpio_tx_pwm(chip, PIN, FREQ, duty);
+        lgTxPwm(chip, PIN, 1000, duty, 0, 0);
         usleep(500000);   // 0.5초
     }
 
     // PWM 중지
-    lgpio_tx_pwm(chip, PIN, 0, 0);
+    lgTxPwm(chip, PIN, 0, 0, 0, 0);
 
     // GPIO chip 닫기
-    lgpio_gpiochip_close(chip);
+    lgGpiochipClose(chip);
 
     return 0;
 }
