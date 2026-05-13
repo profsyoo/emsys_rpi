@@ -12,10 +12,21 @@
 
 #define BUZZER 13          // BCM GPIO13
 
+
+/* Cleanup function for safe exit */
+void handle_sigint(int sig) {
+    printf("\nCleaning up and exiting...\n");
+    lgGpiochipClose(chip_handle);
+    exit(0);
+}
+
 int main(void)
 {
     int h;                // GPIO chip handle
 
+    /* Set up signal handler for Ctrl+C */
+    signal(SIGINT, handle_sigint);
+    
     printf("Welcome to Elecrow\n");
     printf("Raspberry Pi Passive Buzzer test program (lgpio)\n");
     printf("Press Ctrl+C to exit\n");
