@@ -36,6 +36,7 @@ pi@myhost: ~/src $ ./pw_led
 
 ### 📄 파일
 - `8-5lgpio_pwm.py`
+- `8-5pwm.py`
 
 ### ⚙️ 실행
 ```bash
