@@ -7,6 +7,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>         //exit()
 #include <unistd.h>        // usleep()
 #include <signal.h>
 #include <lgpio.h>
