@@ -1,30 +1,27 @@
 import cv2
-camera = cv2.VideoCapture(0, cv2.CAP_V4L) # 카메라 객체 생성
-camera.set(cv2.CAP_PROP_BUFFERSIZE, 10) # 버퍼 크기를 10으로
-def take_picture( ):
-	size = camera.get(cv2.CAP_PROP_BUFFERSIZE) # 버퍼 크기를 읽어온다
-	while size > 0: # 버퍼 내에 저장된 모든 프레임을 버린다
-		camera.grab( ) # camera.read( )로 해도 됨
-		size -= 1
-	ret, frame = camera.read( ) # 버퍼에 있는 현재 프레임을 읽는다.
-	return frame if ret == True else None
-count = 0
-print("OpenCV 로딩 완료")
-print("키 입력 준비 완료")
-frame = take_picture( ) # 먼저 한 장의 이미지를 가져옴
+# 검출 객체를 생성
+classifier = cv2.CascadeClassifier('./haar-cascade-files-master/haarcascade_frontalface_default.xml')
+# 카메라 객체 생성
+camera = cv2.VideoCapture(0, cv2.CAP_V4L)
+camera.set(cv2.CAP_PROP_BUFFERSIZE, 1) # 버퍼 크기를 1로 설정
+# ESC 키가 입력될 때까지 카메라로부터 받은 영상을 실시간으로 창에 재생하고,
+# 영상 속의 얼굴 부분에 사각형을 실시간으로 그린다.
 while True:
-	# 아래 show에서 picture윈도를 만들어야 cv2.waitKey( )가 작동함
-	if frame is not None:
-		cv2.imshow("picture", frame)
-	# ESC 키가 입력되면 종료.
-	# 다른 키가 입력되면 카메라로부터 이미지를 캡처하여 파일로 저장
-	if cv2.waitKey(0) == 27: # 0의 의미는 시간 제약 없이 아무 키 입력 대기
+	camera.grab( ) # 버퍼에 저장된 카메라의 이전 프레임 제거
+	# 버퍼에서 현재 카메라가 촬영한 프레임 읽기
+	ret, image = camera .read( )
+	if ret == False:
+		continue
+	# 이미지를 흑백으로 바꾸고 얼굴 탐지
+	image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+	faces = classifier.detectMultiScale(image_gray)
+	# faces는 배열로, 배열의 각 원소는 탐지된 얼굴의 사각형 정보 [[2, 3, 100, 150], ..., [...]]
+	# faces 배열 전체를 반복하여 이미지 위에 모든 사각형을 그린다.
+	# 노란색(0, 255, 255) 사각형으로 얼굴 표시
+	for x, y, w, h in faces:
+		cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 255), 4)
+	cv2.imshow('preview', image) # 이미지를 preview 이름의 창에 출력
+	if cv2.waitKey(1) == 27: # ESC 키(키 값27)이면 프로그램 종료
 		break
-	else:
-		frame = take_picture( ) # 현재 시점에서의 프레임을 가져옴
-		count += 1
-		file_name = "image_5_7" + str(count) + ".jpg"
-		cv2.imwrite(file_name, frame) # 프레임을 jpg 파일에 저장
 camera.release( )
 cv2.destroyAllWindows( )
-
