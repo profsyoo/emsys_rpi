@@ -44,7 +44,7 @@ fswebcam  is  a small and simple webcam app for *nix. It can capture im‐
 pi@myhost: ~ $ sudo apt-get install fswebcam
 pi@myhost: ~ $ fswebcam image.jpg
 ```
-### ⚙️ play with fswebcam
+### ⚙️ 5.3 play with fswebcam
 - ~/ch05/images 디렉토리 생성 및 경로 이동
 ```bash
 pi@myhost: ~ $ mkdir ch05
@@ -60,6 +60,79 @@ pi@myhost: ~/ch05/images $ ls
 - 사진 확인:
 <img width="879" height="517" alt="image" src="https://github.com/user-attachments/assets/7273966c-62ae-4844-93e8-9b850f43001a" />
 
+- 다른 옵션:
+  - 180도 회전
+    ```bash
+    pi@myhost: ~/ch05/images $ fswebcam -r 640x480 --rotate 180 --jpeg 95 option.jpg
+    ```
+  - resize
+    ```bash
+    pi@myhost: ~/ch05/images $ fswebcam -r 200x150 image_200x150.jpg
+    pi@myhost: ~/ch05/images $ ls
+    image_200x150.jpg image.jpg
+    ```
+  - tile&subtitle
+    ```bash
+    pi@myhost: ~/ch05/images $ fswebcam --title "Hellow" --subtitle "good to see you"
+    pi@myhost: ~/ch05/images $ ls
+    image_200x150.jpg image.jpg image_title.jpg
+    ```
+    
+### ⚙️ 5.4 camera control with OpenCV
+- 가상환경 실행: 이미 lgpio모듈이 설치된 가상환경 실행
+  ```bash
+  pi@myhost: src/py $ source myvenv/bin/activate
+  (myven) pi@myhost: src/py $ cd ch05
+  (myven) pi@myhost: src/py/ch05 $
+  ```
+- OpenCV설치
+  ```bash
+  (myven) pi@myhost: src/py/ch05 $ pip install opencv-python
+  ....
+  Successfully installed numpy-2.4.2 opencv-python-4.13.0.92
+  ```
+  OpenCV 버전: opencv-python-4.13.0.92
+  numpy 버전: numpy-2.4.2
+- OpenCV버전 확인
+  - python shell
+    ```bash
+    (myven) pi@myhost: src/py/ch05 $ pythonpip install opencv-python
+    Python 3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0] on linux
+    Type “help”, “copyright”, “credits” or “license” for more information.
+    >>> import cv2
+    >>>
+    >>> cv2.__version__
+    ‘4.13.0’
+    >>>
+    ```  
+  - pip
+    ```bash
+    (myven) pi@myhost: src/py/ch05 $ pip show opencv-python
+    Name: opencv-python
+    Version: 4.13.0.92
+    Summary: Wrapper package for OpenCV python bindings.
+    Home-page: https://github.com/opencv/opencv-python
+    Author:
+    Author-email:
+    License: Apache 2.0
+    Location: /home/pi/myenv/lib/python3.13/site-packages
+    Requires: numpy
+    Required-by:
+    (myenv) pi@pi:src/py/ch05 $
+    ```
+    ```bash
+    (myenv) pi@pi:~/ch05 $ pip show numpy
+    Name: numpy
+    Version: 2.4.2
+    Summary: Fundamental package for array computing in Python
+    Home-page: https://numpy.org
+    Author: Travis E. Oliphant et al.
+    Author-email:
+    License-Expression: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
+    Location: /home/pi/myenv/lib/python3.13/site-packages
+    Requires:
+    Required-by: opencv-python
+    (myenv) pi@pi:src/py/ch05 $
 ---
 
 
