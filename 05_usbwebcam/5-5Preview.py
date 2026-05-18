@@ -8,6 +8,7 @@ try:
 	  else:
 		  print("Can't capture any frame from the cam..")
 		  break
+	  # Click the preview window, then press 'ESC'
 	  # wait for 'ESC' key for 1 msec.
 	  if cv2.waitKey(1) == 27: # if the key is 'ESC, break from while loop
 		  break
