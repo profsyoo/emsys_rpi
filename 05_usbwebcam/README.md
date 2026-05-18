@@ -85,14 +85,14 @@ pi@myhost: ~/ch05/images $ ls
   (myven) pi@myhost: src/py $ cd ch05
   (myven) pi@myhost: src/py/ch05 $
   ```
-- OpenCV설치
+- OpenCV설치(+numpy): 2분 정도 소요
   ```bash
   (myven) pi@myhost: src/py/ch05 $ pip install opencv-python
   ....
-  Successfully installed numpy-2.4.2 opencv-python-4.13.0.92
+  Successfully installed numpy-2.4.5 opencv-python-4.13.0.92
   ```
   OpenCV 버전: opencv-python-4.13.0.92
-  numpy 버전: numpy-2.4.2
+  numpy 버전: numpy-2.4.5
 - OpenCV버전 확인
   - python shell
     ```bash
@@ -100,9 +100,11 @@ pi@myhost: ~/ch05/images $ ls
     Python 3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0] on linux
     Type “help”, “copyright”, “credits” or “license” for more information.
     >>> import cv2
-    >>>
     >>> cv2.__version__
     ‘4.13.0’
+    >>> import numpy
+    >>> numpy.__version__
+    ‘2.4.5’
     >>>
     ```  
   - pip
@@ -123,7 +125,7 @@ pi@myhost: ~/ch05/images $ ls
     ```bash
     (myenv) pi@pi:~/ch05 $ pip show numpy
     Name: numpy
-    Version: 2.4.2
+    Version: 2.4.5
     Summary: Fundamental package for array computing in Python
     Home-page: https://numpy.org
     Author: Travis E. Oliphant et al.
@@ -154,7 +156,7 @@ pi@myhost: ~/src $ ./8-2sw_int
 ## 💻 Python 예제
 
 ### 📄 파일
-- `8-2sw_polling.py`
+- `5-4CaptureNSave.py`
 - `8-2sw_int.py`
 - `8-3event.py`
 - `8-4swNled.py`
@@ -162,7 +164,7 @@ pi@myhost: ~/src $ ./8-2sw_int
 ### ⚙️ 실행
 ```bash
 pi@myhost: ~/src/py $ source myvenv/bin/activate
-(myvenv) pi@myhost: ~/src/py $ python 8-2sw_polling.py
+(myvenv) pi@myhost: ~/src/py $ python 5-4CaptureNSave.py
 (myvenv) pi@myhost: ~/src/py $ python 8-2sw_int.py
 (myvenv) pi@myhost: ~/src/py $ python 8-2.py
 ```
