@@ -141,15 +141,11 @@ pi@myhost: ~/ch05/images $ ls
 ## 💻 C 예제
 
 ### 📄 파일
-- `8-2sw_polling.c`
-- `8-2sw_int.c`
+- `no.c`
 
 ### ⚙️ 컴파일
 ```bash
-pi@myhost: ~/src $ gcc -o 8-2sw_polling 8-2sw_polling.c -llgpio
-pi@myhost: ~/src $ ./8-2sw_polling
-pi@myhost: ~/src $ gcc -o 8-2sw_int 8-2sw_int.c -llgpio
-pi@myhost: ~/src $ ./8-2sw_int
+pi@myhost: ~/src/c $ 
 ```
 ---
 
