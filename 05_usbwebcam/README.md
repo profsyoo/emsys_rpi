@@ -184,3 +184,6 @@ pi@myhost: ~/src $ ./8-2sw_int_diff
 (myvenv) pi@myhost: ~/src/py $ python 8-2swNled_toggle.py
 ```
 
+## 💻 References
+- <a href="https://docs.opencv.org/4.x/">OpenCV</a>
+
