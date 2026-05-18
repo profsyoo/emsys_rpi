@@ -156,10 +156,12 @@ pi@myhost: ~/src $ ./8-2sw_int
 ## 💻 Python 예제
 
 ### 📄 파일
-- `5-4CaptureNSave.py`
-- `8-2sw_int.py`
-- `8-3event.py`
-- `8-4swNled.py`
+- `5-4CaptureNSave.py`: Capture the image & Save it
+- `5-5Preview.py`: Show the preview in real-time.
+- `5-6PreviewNSave.py`: Show the preview and Save it in a video
+- `5-7CaptureNSaveViaKey.py`: Capture an image via. a key stroke.
+- `5-8FaceRecogHaar.py`: Face recognition based on '5-7...py' and Haar Cascades Model.
+- `5-9FaceRecogHaarRev.py`: revision of '5-8...py'
 
 ### ⚙️ 실행
 ```bash
