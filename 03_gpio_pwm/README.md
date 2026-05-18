@@ -43,3 +43,9 @@ pi@myhost: ~/src $ ./pw_led
 pi@myhost: ~/src/py $ source myvenv/bin/activate 
 (myvenv) pi@myhost: ~/src/py $ python 8-5lgpio_pwm.py
 ```
+
+### ⚙️ DIY
+- switch를 한 번 누르면 밝아지고, 다시 누르면 어두워지고, 다시 누르면 밝아지도록 LED(pwm활용)를 제어하라(hint: `8-5lgpio_pwm.py` 활용하여 `8-5pwm_ledNswitch.py`구현).
+```bash
+(myvenv) pi@myhost: ~/src/py $ python 8-5pwm_ledNswitch.py
+```
