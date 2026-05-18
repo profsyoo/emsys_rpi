@@ -9,13 +9,14 @@ camera.set(cv2.CAP_PROP_FPS, 10)
 fourcc = cv2.VideoWriter_fourcc(*'DIVX') # 코덱 지정
 writer = cv2.VideoWriter("video_5_6.avi", fourcc, 10, (320, 240)) # 10 fps 주기로 저장
 
+print("Starting")
 while True:
 	ret, image = camera.read( )
 	if ret == True:
 		cv2.imshow('preview', image)
 		writer.write(image)
 	else:
-		print('카메라로부터 프레임의 캡처할 수 없습니다.')
+		print("Can't capture any frame from the cam.")
 	break
 
 	# 1 밀리초 동안 ESC 키 입력을 기다린다.
