@@ -1,6 +1,6 @@
 import cv2
 camera = cv2.VideoCapture(0, cv2.CAP_V4L)
-try
+try:
   while True:
 	  ret, image = camera.read( ) # Read a frame from the cam.
 	  if ret == True:
