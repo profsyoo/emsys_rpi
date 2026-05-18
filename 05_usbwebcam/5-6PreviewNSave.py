@@ -17,7 +17,7 @@ while True:
 		writer.write(image)
 	else:
 		print("Can't capture any frame from the cam.")
-	break
+		break
 
 	# 1 밀리초 동안 ESC 키 입력을 기다린다.
 	if cv2.waitKey(1) == 27: # 입력된 키가 ESC이면 while 반복문을 탈출
