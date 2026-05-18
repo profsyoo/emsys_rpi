@@ -77,8 +77,14 @@ pi@myhost: ~/ch05/images $ ls
     pi@myhost: ~/ch05/images $ ls
     image_200x150.jpg image.jpg image_title.jpg
     ```
+
+### ⚙️ 5.4 Python Virtual Environment
+- skip
+<img width="520" height="224" alt="image" src="https://github.com/user-attachments/assets/a4081f4f-38da-4ef6-a724-10a4bae744d7" />
+<img width="597" height="312" alt="image" src="https://github.com/user-attachments/assets/6f02544f-bc7c-4b1d-86a0-7a620f149ff4" />
+
     
-### ⚙️ 5.4 camera control with OpenCV
+### ⚙️ 5.5 camera control with OpenCV
 - 가상환경 실행: 이미 lgpio모듈이 설치된 가상환경 실행
   ```bash
   pi@myhost: src/py $ source myvenv/bin/activate
@@ -135,6 +141,10 @@ pi@myhost: ~/ch05/images $ ls
     Requires:
     Required-by: opencv-python
     (myenv) pi@pi:src/py/ch05 $
+
+### ⚙️ 5.6 Object Recognition with Haar Cascades
+- Object Recognition with Haar Cascades Model
+
 ---
 
 
