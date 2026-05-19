@@ -179,7 +179,8 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 ```
 
 ### ⚙️ DIY
-- time stamp 정보를 활용하여 이전 event와 지금 event의 시간 차(iterval)을 ms단위로 출력하도록 소스(`8-2sw_int.py`) 수정(`8-2sw_int_diff.py`)
+- 스위치를 누를 때 마다, 사진을 촬영하는(파일이름에 현재 날짜/시간 정보 표시) 프로그램(fswebcam명령어 활용, 5-0subprocee.py활용)
+- 객체가 일정 거리 이상 근접하는 경우, LED를 켜고 사진 촬영(파일 이름에 event 시간 정보time stamp 정보를 활용하여 이전 event와 지금 event의 시간 차(iterval)을 ms단위로 출력하도록 소스(`8-2sw_int.py`) 수정(`8-2sw_int_diff.py`)
 ```bash
 (myvenv) pi@myhost: ~/src/py $ python 8-2sw_int_diff.py
 ```
@@ -194,6 +195,7 @@ pi@myhost: ~/src $ ./8-2sw_int_diff
 ```
 
 ## 💻 Troubleshooting
+- RDP에서 사진 클릭 시 뷰어프로그램 실행 안됨: local login여부 확인 후 로그 아웃
 ~~- Qt font..~~
   ```text
   QFontDatabase: Cannot find font directory /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/fonts.
