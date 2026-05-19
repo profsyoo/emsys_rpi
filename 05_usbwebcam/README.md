@@ -13,8 +13,8 @@ Raspberry Pi 5에서 **USB Web Cam 기본 동작**을 실습하는 예제입니�
 ## 🧰 하드웨어
 - Raspberry Pi 5
 - USB Webcam: <a href="https://www.abko.co.kr/brand/detail.php?it_id=1602055135&device=pc">ABKO APC720 HD 웹캠</a>
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/9cfac6c9-184b-41a7-a433-bf6cdcddc132" />
   - HD720p(1280x720), 30fps
+  <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/9cfac6c9-184b-41a7-a433-bf6cdcddc132" />
 - passive buzzer, tact switch, LED, ultrasound ranging sensor, etc.
 
 ---
