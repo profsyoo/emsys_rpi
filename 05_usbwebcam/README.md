@@ -58,7 +58,7 @@ pi@myhost: ~/ch05/images $ fswebcam image.jpg
 pi@myhost: ~/ch05/images $ ls
 ```
 - 사진 확인:
-<img width="879" height="517" alt="image" src="https://github.com/user-attachments/assets/7273966c-62ae-4844-93e8-9b850f43001a" />
+<img width="586" height="345" alt="image" src="https://github.com/user-attachments/assets/7273966c-62ae-4844-93e8-9b850f43001a" />
 
 - 다른 옵션:
   - 180도 회전
