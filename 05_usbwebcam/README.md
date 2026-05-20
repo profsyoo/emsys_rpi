@@ -199,7 +199,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
   ```
   
-  - solution
+  - solution by Gemmini
     ```bash
     (ve-rpi-lgpio) pi@myhost: ~/src/py $ sudo apt install -y fontconfig fonts-dejavu
     ```
