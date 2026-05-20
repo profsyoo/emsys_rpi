@@ -1,4 +1,4 @@
-#may take some time
+#may take some time to import 'cv2' module
 import cv2
 
 try:
