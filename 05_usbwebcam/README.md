@@ -184,7 +184,8 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
     
 ## 💻 Troubleshooting
 - RDP에서 사진 클릭 시 뷰어프로그램 실행 안됨: local login여부 확인 후 로그 아웃
-- "QFontDatabase: Cannot find font directory"
+- "QFontDatabase: Cannot find font directory":
+  - 아래 에러 메시지의 디렉토리 확인: **home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/**
   ```text
   QFontDatabase: Cannot find font directory /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/fonts.
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
@@ -194,7 +195,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
   QFontDatabase: Cannot find font directory /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/fonts.
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
-  QFontDatabase: Cannot find font directory <font color=red>/home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/</font>fonts.
+  QFontDatabase: Cannot find font directory /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/fonts.
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
   ```
   
