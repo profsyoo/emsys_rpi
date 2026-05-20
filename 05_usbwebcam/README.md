@@ -185,7 +185,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 ## 💻 Troubleshooting
 - RDP에서 사진 클릭 시 뷰어프로그램 실행 안됨: local login여부 확인 후 로그 아웃
 - "QFontDatabase: Cannot find font directory":
-  - 아래 에러 메시지의 디렉토리 확인: **home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/**
+  - ⚠️ 아래 에러 메시지의 디렉토리 확인: **home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/**
   ```text
   QFontDatabase: Cannot find font directory /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/fonts.
   Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
@@ -203,7 +203,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
     ```bash
     (ve-rpi-lgpio) pi@myhost: ~/src/py $ sudo apt install -y fontconfig fonts-dejavu
     ```
-  - 여전히 문제라면, "시스템에 폰트를 설치했음에도 불구하고, 파이썬 가상환경(myvenv) 안에 설치된 OpenCV의 내장 Qt 라이브러리가 여전히 특정 경로에서 폰트 디렉토리를 고집스럽게 찾고 있어서 발생하는 현상": "에러 메시지가 가리키는 정확한 가상환경 경로에 폰트 디렉토리를 직접 수동으로 심어주는 방법". **주의(위의 에러 메시지의 경로 확인 후 아래 명령어 적절히 수행)**
+  - 여전히 문제라면, "시스템에 폰트를 설치했음에도 불구하고, 파이썬 가상환경(myvenv) 안에 설치된 OpenCV의 내장 Qt 라이브러리가 여전히 특정 경로에서 폰트 디렉토리를 고집스럽게 찾고 있어서 발생하는 현상": "에러 메시지가 가리키는 정확한 가상환경 경로에 폰트 디렉토리를 직접 수동으로 심어주는 방법". ⚠️ **주의(위의 에러 메시지의 경로 확인 후 아래 명령어 적절히 수행)**
     ```bash
     (ve-rpi-lgpio) pi@myhost: ~/src/py $ cd /home/pi/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt/
     (ve-rpi-lgpio) pi@myhost: ~/src/py/book/ve-rpi-lgpio/lib/python3.13/site-packages/cv2/qt $ mkdir fonts
