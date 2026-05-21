@@ -83,13 +83,13 @@ pi@myhost: ~/ch05/images $ ls
 ### ⚙️ 5.5 camera control with OpenCV
 - 가상환경 실행: 이미 lgpio모듈이 설치된 가상환경 실행
   ```bash
-  pi@myhost: src/py $ source myvenv/bin/activate
-  (myven) pi@myhost: src/py $ cd ch05
-  (myven) pi@myhost: src/py/ch05 $
+  pi@myhost: ~/src/py $ source myvenv/bin/activate
+  (myven) pi@myhost:~/src/py $ cd ch05
+  (myven) pi@myhost:~/src/py/ch05 $
   ```
 - OpenCV설치(+numpy): 2분 정도 소요
   ```bash
-  (myven) pi@myhost: src/py/ch05 $ pip install opencv-python
+  (myven) pi@myhost:~/src/py/ch05 $ pip install opencv-python
   ....
   Successfully installed numpy-2.4.5 opencv-python-4.13.0.92
   ```
@@ -111,7 +111,7 @@ pi@myhost: ~/ch05/images $ ls
     ```  
   - pip
     ```bash
-    (myven) pi@myhost: src/py/ch05 $ pip show opencv-python
+    (myven) pi@myhost: ~/src/py/ch05 $ pip show opencv-python
     Name: opencv-python
     Version: 4.13.0.92
     Summary: Wrapper package for OpenCV python bindings.
@@ -122,10 +122,10 @@ pi@myhost: ~/ch05/images $ ls
     Location: /home/pi/myenv/lib/python3.13/site-packages
     Requires: numpy
     Required-by:
-    (myenv) pi@pi:src/py/ch05 $
+    (myenv) pi@pi:~/src/py/ch05 $
     ```
     ```bash
-    (myenv) pi@pi:~/ch05 $ pip show numpy
+    (myenv) pi@pi:~src/py/ch05 $ pip show numpy
     Name: numpy
     Version: 2.4.5
     Summary: Fundamental package for array computing in Python
@@ -136,11 +136,28 @@ pi@myhost: ~/ch05/images $ ls
     Location: /home/pi/myenv/lib/python3.13/site-packages
     Requires:
     Required-by: opencv-python
-    (myenv) pi@pi:src/py/ch05 $
+    (myenv) pi@pi:~src/py/ch05 $
 
 ### ⚙️ 5.6 Object Recognition with Haar Cascades
 - Object Recognition with Haar Cascades Model
-
+- Haar Cascades 학습 모델 다운로드 및 압축해제
+  ```bash
+  (myenv) pi@pi:~/src/py/ch05 $ wget https://github.com/anaustinbeing/haar-cascade-files/archive/master.zip
+  (myenv) pi@pi:~/src/py/ch05 $ unzip master.zip
+  (myenv) pi@pi:~/src/py/ch05 $ cd haar-*
+  (myenv) pi@pi:~/ch05/haar-cascade-files-master $ ls
+  _config.yml
+  haarcascade_eye_tree_eyeglasses.xml
+  haarcascade_eye.xml
+  haarcascade_frontalcatface_extended.xml
+  haarcascade_frontalcatface.xml
+  haarcascade_frontalface_alt2.xml
+  haarcascade_frontalface_alt_tree.xml
+  haarcascade_frontalface_alt.xml
+  haarcascade_frontalface_default.xml
+  ...
+  README.md
+  ```
 ---
 
 
