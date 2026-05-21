@@ -1,5 +1,9 @@
 import cv2
 camera = cv2.VideoCapture(0, cv2.CAP_V4L)
+
+print("To stop,")
+print("Press 'ESC' on the 'preview' window, or")
+print("Press 'Ctrl+c' in the terminal....")
 try:
   while True:
 	  ret, image = camera.read( ) # Read a frame from the cam.
