@@ -6,7 +6,9 @@ eyeClassifier = cv2.CascadeClassifier('./haar-cascade-files-master/haarcascade_e
 camera = cv2.VideoCapture(0, cv2.CAP_V4L)
 camera.set(cv2.CAP_PROP_BUFFERSIZE, 1) # 버퍼 크기를 1로 설정
 
-print("Press 'Ctrl+c' to stop....")
+print("To stop,")
+print("Press 'ESC' on the 'preview' window, or")
+print("Press 'Ctrl+c' in the terminal....")
 try:
 	while True:
 		camera.grab( ) # 버퍼에 저장된 카메라의 이전 프레임 제거
