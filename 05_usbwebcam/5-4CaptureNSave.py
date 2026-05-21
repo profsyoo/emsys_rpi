@@ -1,6 +1,9 @@
 #may take some time to import 'cv2' module
 import cv2
 
+print("To stop,")
+print("Press 'ESC' on the 'preview' window, or")
+print("Press 'Ctrl+c' in the terminal....")
 try:
   camera = cv2.VideoCapture(0, cv2.CAP_V4L)
   ret, image = camera.read( )
