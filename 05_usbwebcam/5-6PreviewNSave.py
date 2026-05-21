@@ -9,7 +9,10 @@ camera.set(cv2.CAP_PROP_FPS, 10)
 fourcc = cv2.VideoWriter_fourcc(*'DIVX') # 코덱 지정
 writer = cv2.VideoWriter("video_5_6.avi", fourcc, 10, (320, 240)) # 10 fps 주기로 저장
 
-print("Starting")
+print("Starting\n")
+print("To stop,")
+print("Press 'ESC' on the 'preview' window, or")
+print("Press 'Ctrl+c' in the terminal....")
 try:
   while True:
 	  ret, image = camera.read( )
