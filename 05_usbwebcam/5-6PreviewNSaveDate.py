@@ -18,8 +18,10 @@ fourcc = cv2.VideoWriter_fourcc(*'DIVX')  # 코덱 지정
 temp_filename = "temp.avi"
 writer = cv2.VideoWriter(temp_filename, fourcc, 10, (320, 240))
 
-print("Starting")
-
+print("Starting\n")
+print("To stop,")
+print("Press 'ESC' on the 'preview' window, or")
+print("Press 'Ctrl+c' in the terminal....")
 try:
     while True:
         ret, image = camera.read()
