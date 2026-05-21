@@ -8,6 +8,7 @@ camera.set(cv2.CAP_PROP_BUFFERSIZE, 1) # 버퍼 크기를 1로 설정
 
 # ESC 키가 입력될 때까지 카메라로부터 받은 영상을 실시간으로 창에 재생하고,
 # 영상 속의 얼굴 부분에 사각형을 실시간으로 그린다.
+print("Press 'Ctrl+c' to stop....")
 try:
 	while True:
 		camera.grab( ) # 버퍼에 저장된 카메라의 이전 프레임 제거
