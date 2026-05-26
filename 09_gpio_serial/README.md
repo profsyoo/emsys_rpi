@@ -58,7 +58,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
   ```
 
 ### 📄 I2C활성화 후
-- (After) kernal module&device file
+- (After) kernel module&device file
   ```bash
   pi@myhost: ~/src/c $ lsmod | grep i2c
   pi@myhost: ~/src/c $ ls -l /dev/i3c*
