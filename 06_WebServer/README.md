@@ -45,9 +45,10 @@ Raspberry Pi 5에서 **Web Service**을 실습하는 예제입니다.
   config.py json sessions.py wrappers.py
   ctx.py logging.py signals.py
   debughelpers.py __main__.py templating.py
-```
+  ```
+
 ### ⚙️ hello_flask.py
-- ~/src/py/ch06/hello_flask.py에 다음을 저장. 
+- `~/src/py/ch06/hello_flask.py`에 다음을 저장. 
 ```text
 from flask import Flask
 
@@ -59,94 +60,7 @@ def home():
 
 if __name__ == '__main__':	# 이 프로그램이 독립적으로 실행되는 경우
 	app.run(host='0.0.0.0', port=8080, debug=True) # app.run() 함수 실행
-<img width="1028" height="377" alt="image" src="https://github.com/user-attachments/assets/ac785557-d03b-4af4-8a19-5b8796edc5fc" />
-
 ```
-
-### ⚙️ 5.4 Python Virtual Environment
-- skip
-<img width="520" height="224" alt="image" src="https://github.com/user-attachments/assets/a4081f4f-38da-4ef6-a724-10a4bae744d7" />
-<img width="597" height="312" alt="image" src="https://github.com/user-attachments/assets/6f02544f-bc7c-4b1d-86a0-7a620f149ff4" />
-
-    
-### ⚙️ 5.5 camera control with OpenCV
-- 가상환경 실행: 이미 lgpio모듈이 설치된 가상환경 실행
-  ```bash
-  pi@myhost: ~/src/py $ source myvenv/bin/activate
-  (myven) pi@myhost:~/src/py $ cd ch05
-  (myven) pi@myhost:~/src/py/ch05 $
-  ```
-- OpenCV설치(+numpy): 2분 정도 소요
-  ```bash
-  (myven) pi@myhost:~/src/py/ch05 $ pip install opencv-python
-  ....
-  Successfully installed numpy-2.4.5 opencv-python-4.13.0.92
-  ```
-  OpenCV 버전: opencv-python-4.13.0.92
-  numpy 버전: numpy-2.4.5
-- OpenCV버전 확인
-  - python shell
-    ```bash
-    (myven) pi@myhost: src/py/ch05 $ pythonpip install opencv-python
-    Python 3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0] on linux
-    Type “help”, “copyright”, “credits” or “license” for more information.
-    >>> import cv2
-    >>> cv2.__version__
-    ‘4.13.0’
-    >>> import numpy
-    >>> numpy.__version__
-    ‘2.4.5’
-    >>>
-    ```  
-  - pip
-    ```bash
-    (myven) pi@myhost: ~/src/py/ch05 $ pip show opencv-python
-    Name: opencv-python
-    Version: 4.13.0.92
-    Summary: Wrapper package for OpenCV python bindings.
-    Home-page: https://github.com/opencv/opencv-python
-    Author:
-    Author-email:
-    License: Apache 2.0
-    Location: /home/pi/myenv/lib/python3.13/site-packages
-    Requires: numpy
-    Required-by:
-    (myenv) pi@pi:~/src/py/ch05 $
-    ```
-    ```bash
-    (myenv) pi@pi:~src/py/ch05 $ pip show numpy
-    Name: numpy
-    Version: 2.4.5
-    Summary: Fundamental package for array computing in Python
-    Home-page: https://numpy.org
-    Author: Travis E. Oliphant et al.
-    Author-email:
-    License-Expression: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
-    Location: /home/pi/myenv/lib/python3.13/site-packages
-    Requires:
-    Required-by: opencv-python
-    (myenv) pi@pi:~src/py/ch05 $
-
-### ⚙️ 5.6 Object Recognition with Haar Cascades
-- Object Recognition with Haar Cascades Model
-- Haar Cascades 학습 모델 다운로드 및 압축해제
-  ```bash
-  (myenv) pi@pi:~/src/py/ch05 $ wget https://github.com/anaustinbeing/haar-cascade-files/archive/master.zip
-  (myenv) pi@pi:~/src/py/ch05 $ unzip master.zip
-  (myenv) pi@pi:~/src/py/ch05 $ cd haar-*
-  (myenv) pi@pi:~/ch05/haar-cascade-files-master $ ls
-  _config.yml
-  haarcascade_eye_tree_eyeglasses.xml
-  haarcascade_eye.xml
-  haarcascade_frontalcatface_extended.xml
-  haarcascade_frontalcatface.xml
-  haarcascade_frontalface_alt2.xml
-  haarcascade_frontalface_alt_tree.xml
-  haarcascade_frontalface_alt.xml
-  haarcascade_frontalface_default.xml
-  ...
-  README.md
-  ```
 ---
 
 
