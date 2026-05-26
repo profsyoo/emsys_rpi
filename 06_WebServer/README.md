@@ -24,71 +24,44 @@ Raspberry Pi 5에서 **Web Service**을 실습하는 예제입니다.
 
 ## 💻 Warmup
 ### ⚙️ Flask 설치
-- ~/src/py/ch05 디렉토리 생성 및 경로 이동 & 가상환경 활성화
+- ~/src/py/ch06 디렉토리 생성 및 경로 이동 & 가상환경 활성화
   ```bash
   pi@myhost: ~/src/py $ mkdir ch06
   pi@myhost: ~/src/py $ source myvenv/bin/activate
   ```
 - Flask 설치: ~/myven/lib/python3.13/site-packages에 Flask라이브러리 설치됨.
+- Flask 설치 여부 확인
   ```bash
   (myven) pi@myhost:~/src/py $ pip install flask
-  (myven) pi@myhost:~/src/py/ch06 $
-
-(myven) pi@myhost:~/src/py $ cd ch06
-  (myven) pi@myhost:~/src/py/ch06 $
-
-pi@myhost: ~ $ sudo apt-get install fswebcam
-pi@myhost: ~ $ fswebcam image.jpg
+  (myven) pi@myhost:~/src/py $ cd myenv/lib/python3.13/site-packages
+  (myven) pi@myhost:~/src/py/mvenv/lib/python3.13/site-packages $ ls | grep flask
+  flask
+  flask-3.1.3.dist-info
+  (myven) pi@myhost:~/src/py/mvenv/lib/python3.13/site-packages $ cd flask
+  (myven) pi@myhost:~/src/py/mvenv/lib/python3.13/site-packages/flask $ ls
+  app.py globals.py __pycache__ testing.py
+  blueprints.py helpers.py py.typed typing.py
+  cli.py __init__.py sansio views.py
+  config.py json sessions.py wrappers.py
+  ctx.py logging.py signals.py
+  debughelpers.py __main__.py templating.py
 ```
-
-- 설치 여부 확인<a href="https://www.sanslogic.co.uk/fswebcam/">fswebcam</a>:
+### ⚙️ hello_flask.py
+- ~/src/py/ch06/hello_flask.py에 다음을 저장. 
 ```text
-  Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
-```
-```bash
-myven) pi@myhost:~/src/py $ cd ch06
-  (myven) pi@myhost:~/src/py/ch06 $
+from flask import Flask
 
-(myven) pi@myhost:~/src/py $ cd ch06
-  (myven) pi@myhost:~/src/py/ch06 $
+app = Flask(__name__) # Flask 객체 생성
 
-pi@myhost: ~ $ sudo apt-get install fswebcam
-pi@myhost: ~ $ fswebcam image.jpg
-```
-### ⚙️ 5.3 play with fswebcam
-- ~/src/py/ch05 디렉토리 생성 및 경로 이동 & 가상환경 활성화
-```bash
-pi@myhost: ~/src/py $ mkdir ch06
-pi@myhost: ~/src/py $ source myvenv/bin/activate
-(myven) pi@myhost:~/src/py $ cd ch06
-(myven) pi@myhost:~/src/py/ch06 $
-```
-- 플라스크 설치
-```bash
-pi@myhost: ~/ch05/images $ fswebcam image.jpg
-pi@myhost: ~/ch05/images $ ls
-```
-- 사진 확인:
-  
-  <img width="586" height="345" alt="image" src="https://github.com/user-attachments/assets/7273966c-62ae-4844-93e8-9b850f43001a" />
+@app.route('/') # 다음 2라인이 라우팅 테이블에 ['/':home]를 저장하도록 함 
+def home(): 
+	return '<h2>Hello, Flask</h2>'
 
-- 다른 옵션:
-  - 180도 회전
-    ```bash
-    pi@myhost: ~/ch05/images $ fswebcam -r 640x480 --rotate 180 --jpeg 95 option.jpg
-    ```
-  - resize
-    ```bash
-    pi@myhost: ~/ch05/images $ fswebcam -r 200x150 image_200x150.jpg
-    pi@myhost: ~/ch05/images $ ls
-    image_200x150.jpg image.jpg
-    ```
-  - tile&subtitle
-    ```bash
-    pi@myhost: ~/ch05/images $ fswebcam --title "Hellow" --subtitle "good to see you"
-    pi@myhost: ~/ch05/images $ ls
-    image_200x150.jpg image.jpg image_title.jpg
-    ```
+if __name__ == '__main__':	# 이 프로그램이 독립적으로 실행되는 경우
+	app.run(host='0.0.0.0', port=8080, debug=True) # app.run() 함수 실행
+<img width="1028" height="377" alt="image" src="https://github.com/user-attachments/assets/ac785557-d03b-4af4-8a19-5b8796edc5fc" />
+
+```
 
 ### ⚙️ 5.4 Python Virtual Environment
 - skip
