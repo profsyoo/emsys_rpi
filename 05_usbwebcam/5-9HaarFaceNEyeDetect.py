@@ -25,6 +25,7 @@ try:
 			cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 255), 4)
 		# 빨간색(0, 0, 255) 사각형으로 눈 표시
 		for x, y, w, h in eyes:
+			#(0, 0, 255): (B, G, R)
 			cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 4)
 		cv2.imshow('preview', image) # 이미지를 preview 이름의 창에 출력
 		if cv2.waitKey(1) == 27: # ESC 키(키 값27)이면 프로그램 종료
