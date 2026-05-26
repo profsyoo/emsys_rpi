@@ -23,7 +23,7 @@ try:
 		faces = classifier.detectMultiScale(image_gray)
 		# faces는 배열로, 배열의 각 원소는 탐지된 얼굴의 사각형 정보 [[2, 3, 100, 150], ..., [...]]
 		# faces 배열 전체를 반복하여 이미지 위에 모든 사각형을 그린다.
-		# 노란색(0, 255, 255) 사각형으로 얼굴 표시
+		# 노란색(0, 255, 255):(B, G, R) 사각형으로 얼굴 표시
 		for x, y, w, h in faces:
 			cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 255), 4)
 		cv2.imshow('preview', image) # 이미지를 preview 이름의 창에 출력
