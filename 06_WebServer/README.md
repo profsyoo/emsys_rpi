@@ -95,7 +95,7 @@ pi@myhost: ~/src/py $ source myvenv/bin/activate
 ### ⚙️ DIY
 - 새로운 URL라우팅 테이블을 추가하고 서로 다른 URL 요청을 테스트 하라.
 - LED제어를 위한 새로운 URL라우팅 테이블을 추가혹 테스트하라.
-- 
+- port forwarding: how to access your Raspberry Pi from the external network such as your mobile network(your phone?)
     
 ## 💻 ~~Troubleshooting~~
 - to be updated
