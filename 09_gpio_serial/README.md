@@ -61,7 +61,7 @@ Raspberry Pi 5에서 **Serial Comm. 기본 동작**을 실습하는 예제입니
 - (After) kernel module&device file
   ```bash
   pi@myhost: ~/src/c $ lsmod | grep i2c
-  pi@myhost: ~/src/c $ ls -l /dev/i3c*
+  pi@myhost: ~/src/c $ ls -l /dev/i2c*
   ```
 - i2c 유틸리티 프로그램 설치 & i2c 버스에 연결된 Slave 장치 확인
   - 1번 i2c 버스에 대해, 라즈베리파이의 i2c master에 연결된 127개의 Slave를 찾아 정보 출력
