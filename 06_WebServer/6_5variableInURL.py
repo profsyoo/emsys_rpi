@@ -9,7 +9,7 @@ def hello(name):
 	elif name == 'jmlee':
 		str = "<h2>Hello, Jmlee</h2>"
 	else:
-		str = "" # 빈 내용을 리턴한다.
+		str = "Your Input String is '"+name+"'" # 'name'변수값
 	return str
 
 if __name__ == '__main__':
