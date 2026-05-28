@@ -1,4 +1,4 @@
-# 🕷️🕸️ ~~Web Service~~
+# 🕷️🕸️ Web Service
 
 Not ready! Coming Soon
 Raspberry Pi 5에서 **Web Service**을 실습하는 예제입니다.
