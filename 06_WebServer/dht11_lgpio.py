@@ -1,4 +1,5 @@
 #translated by Gemini
+#updated from 10_dht11_tempNhumid/dht11_lgpio.py to make it improtable for the web service
 import time
 import lgpio
 
