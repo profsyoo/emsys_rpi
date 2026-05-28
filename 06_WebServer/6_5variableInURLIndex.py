@@ -1,3 +1,4 @@
+#dht11 import & use it
 from flask import Flask
 
 import dht11_lgpio as dht11
